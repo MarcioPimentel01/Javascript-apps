@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion - JavaScript</title>
+    <link rel="stylesheet" href="../03-exercises/assets/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+
+</head>
+<body>
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; text-align: center;">TYPE CONVERSION - JAVASCRIPT</h1>
+    <HR></HR>
+    <!-- changes go here -->
+
+    <h1>Analyzing the Behavior of the <mark>stringType()</mark> Function"</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+                function stringType() {
+                    let a = "coconut";
+                    let b = "coconut";
+                    let c = "coconut";
+                    a = Number(a); // Convert 'a' to a number
+                    b = String(b); // Convert 'b' to a string (although it's already a string)
+                    c = Boolean(c); // Convert 'c' to a boolean
+                    console.log(a, typeof a);
+                    console.log(b, typeof b);
+                    console.log(c, typeof c);
+                }
+            </code>
+        </pre>
+    </div>
+
+    <ol>
+        <li>NaN and its type number: When you try to convert the string "coconut" to a number 
+            using Number(), it results in NaN (Not a Number). This is because "coconut" is not a 
+            valid number. So, the value of variable 'a' becomes NaN after the conversion.</li>
+        <li>"coconut" and its type string: Variable 'b' is already a string, so converting 
+            it to a string using String() doesn't change its value. It remains "coconut".</li>
+        <li>true and its type boolean: When you convert the string "coconut" to a boolean 
+            using Boolean(), any non-empty string is considered true. Therefore, the value 
+            of variable 'c' becomes true after the conversion.</li>
+    </ol>
+
+    <hr>
+
+    <h1>Analyzing the Behavior of the <mark>NumberType()</mark> Function"</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+                function NumberType () {
+                    let a = "10";
+                    let b = "10";
+                    let c = "10";
+                    a = Number(a); // Convert 'a' to a number
+                    b = String(b); // Convert 'b' to a string (although it's already a string)
+                    c = Boolean(c); // Convert 'c' to a boolean
+                    console.log(a, typeof a);
+                    console.log(b, typeof b);
+                    console.log(c, typeof c);
+                }
+            </code>
+        </pre>
+    </div>
+    <ol>
+        <li>10 and its type number: Variable 'a' is assigned the string value "10", but it's 
+            converted to a number using Number(), resulting in the number 10. So, the value 
+            of 'a' after the conversion is 10, and its type is number.</li>
+        <li>"10" and its type string: Variable 'b' is already a string, so converting it to 
+            a string using String() doesn't change its value. It remains "10", and its type is string.</li>
+        <li>true and its type boolean: When you convert the string "10" to a boolean using 
+            oolean(), any non-empty string is considered true. Therefore, the value of 'c' 
+            becomes true after the conversion, and its type is boolean.</li>
+    </ol>
+
+    <hr>
+
+    <h1>Analyzing the Behavior of the <mark>zeroType()</mark> Function"</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+                function zeroType () {
+                    let a = "0";
+                    let b = "0";
+                    let c = "0";
+                    a = Number(a); // Convert 'a' to a number
+                    b = String(b); // Convert 'b' to a string (although it's already a string)
+                    c = Boolean(c); // Convert 'c' to a boolean
+                    console.log(a, typeof a);
+                    console.log(b, typeof b);
+                    console.log(c, typeof c);
+                }
+            </code>
+        </pre>
+    </div>
+    <ol>
+        <li>0 and its type number: Variable 'a' is assigned the string value "0", 
+            but it's converted to a number using Number(), resulting in the number 
+            0. So, the value of 'a' after the conversion is 0, and its type is number.</li>
+        <li>"0" and its type string: Variable 'b' is already a string, so converting 
+            it to a string using String() doesn't change its value. It remains "0", and its type is string.</li>
+        <li>true and its type boolean: When you convert the string "0" to a boolean 
+            using Boolean(), any non-empty string is considered true. Therefore, the 
+            value of 'c' becomes true after the conversion, and its type is boolean.</li>
+    </ol>
+
+    <hr>
+
+    <h1>Analyzing the Behavior of the <mark>noValue()</mark> Function"</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+                function noValue () {
+                    let a = "";
+                    let b = "";
+                    let c = "";
+                    a = Number(a); // Convert 'a' to a number
+                    b = String(b); // Convert 'b' to a string (although it's already a string)
+                    c = Boolean(c); // Convert 'c' to a boolean
+                    console.log(a, typeof a);
+                    console.log(b, typeof b);
+                    console.log(c, typeof c);
+                }   
+            </code>
+        </pre>
+    </div>
+    <ol>
+        <li>0 and its type number: Variable 'a' is assigned an empty string, but it's converted 
+            to a number using Number(). An empty string converts to 0 when converted to a number. 
+            So, the value of 'a' after the conversion is 0, and its type is number.</li>
+        <li>"" (empty string) and its type string: Variable 'b' is already an empty string, 
+            so converting it to a string using String() doesn't change its value. It remains an 
+            empty string "", and its type is string.</li>
+        <li>false and its type boolean: When you convert an empty string to a boolean using 
+            Boolean(), it results in false. Therefore, the value of 'c' becomes false after 
+            the conversion, and its type is boolean.</li>
+    </ol>
+
+    <hr>
+
+    <h1>Analyzing the Behavior of the <mark>noAssignment()</mark> Function"</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+                function noAssignment () {
+                    let a;
+                    let b;
+                    let c;
+                    a = Number(a); // Convert 'a' to a number
+                    b = String(b); // Convert 'b' to a string (although it's undefined)
+                    c = Boolean(c); // Convert 'c' to a boolean (although it's undefined)
+                    console.log(a, typeof a);
+                    console.log(b, typeof b);
+                    console.log(c, typeof c);
+                }
+            </code>
+        </pre>
+    </div>
+    <ol>
+        <li>NaN and its type number: Variable 'a' is declared but not assigned a value, so 
+            it's undefined. When you convert undefined to a number using Number(), it results 
+            in NaN (Not a Number). Therefore, the value of 'a' after the conversion is NaN, and 
+            its type is number</li>
+        <li>"" (empty string) and its type string: Variable 'b' is declared but not assigned a 
+            value, so it's undefined. When you convert undefined to a string using String(), 
+            it results in an empty string "". Therefore, the value of 'b' remains an empty string "", 
+            and its type is string.</li>
+        <li>false and its type boolean: Variable 'c' is declared but not assigned a value, 
+            so it's undefined. When you convert undefined to a boolean using Boolean(), it 
+            results in false. Therefore, the value of 'c' remains false, and its type is boolean.</li>
+    </ol>
+
+    <hr>
+
+    
+
+    
+    <script src="../03-exercises/assets/type-conversion.js"></script>
+   
+    <!-- Include Prism.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>
