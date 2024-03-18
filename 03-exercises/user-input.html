@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input User JavaScript</title>
+    <link rel="stylesheet" href="../03-exercises/assets/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+
+</head>
+<body>
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; text-align: center;">USER INPUT - JAVASCRIPT</h1>
+    <HR></HR>
+    <h1 id="myH1">Welcome</h1>
+    
+    <label for="myText"></label>
+    <input id="myText" type="text">
+    <button id="mySubmit">Submit</button>
+ 
+    <h1>JavaScript Code</h1>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+    document.getElementById("mySubmit").onclick = function () {
+    var userName = document.getElementById("myText").value;
+    console.log(userName);
+    var h1 = "Welcome ";
+    document.getElementById("myH1").innerText = h1 + userName;
+    console.log(h1);
+    }
+            </code>
+        </pre>
+    </div>
+
+    <hr>
+
+    <h1>Another option for JavaSacript</h1>
+
+    <h1 id="myH1Two">Hi There</h1>
+    
+    <label for="myTextTwo"></label>
+    <input id="myTextTwo" type="text">
+    <button id="mySubmitTwo">Submit</button>
+
+    <div class="code-container">
+        <pre>
+            <code class="language-javascript">
+    document.getElementById("mySubmitTwo").onclick = function () {
+    userName = document.getElementById("myTextTwo").value;
+    console.log(userName);
+    document.getElementById("myH1Two").textContent = "Hello " + userName;
+    }
+            </code>
+        </pre>
+    </div>
+    
+    <script src="../03-exercises/assets/script-input-user.js"></script>
+   
+    <!-- Include Prism.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+</body>
+</html>
