@@ -1,7 +1,8 @@
 let count = 0 // Declares a variable named 'count' and initializes it with the value 0.
+let sumTotal = 0 // it took me some time to realize that I had to decler this variable, I added the button Total after I finished the project.
 let countEl = document.getElementById("count-el"); // Logs the retrieved HTML element to the console. - There is an id called count-el on the h2 element.
-let saveEl = document.getElementById("save-el");
-let sumEl = document.getElementById("sum-el");
+let saveEl = document.getElementById("save-el"); //Id calling
+let sumEl = document.getElementById("sum-el"); //Id Calling
 console.log(countEl); //Just to display, and debug porpuses.
 function increment() { //defines the name of the function
     console.log("clicked"); //Just to display, and debug porpuses.
@@ -15,7 +16,7 @@ function save() {
     alert(`the value ${count} was saved`);
     let valueDash = count + " - ";
     saveEl.innerText += valueDash;
-    sumTotal += count;
+    sumTotal += count; // this was the line added to update the total sum togheter with the count.
     count = 0;
     countEl.innerText = count;
 }
