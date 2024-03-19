@@ -13,3 +13,12 @@ function circumferenceCalc() {
     console.log(circumference);
     circumferenceEl.innerText = circumference;
 }
+
+//another way (need to be fixed)
+
+// document.getElementById("radius").onclick = function () {
+//     radius = parseFloat(document.getElementById("radius").value);
+//     circumference = 2 * PI * radius; //formula
+//     console.log(circumference);
+//     circumferenceEl.innerText = circumference;
+// }
